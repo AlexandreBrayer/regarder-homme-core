@@ -12,7 +12,7 @@ T = TypeVar("T")
 def convert_product(products: list[Product]) -> dict[str,T]:
     return [vars(product) for product in products]
 
-class Base_Class(scrapy.Spider):
+class BaseClass(scrapy.Spider):
     def __init__(self):
         dispatcher.connect(self.spider_closed, signals.spider_closed)
         self.products = []
