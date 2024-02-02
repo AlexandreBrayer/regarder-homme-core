@@ -1,8 +1,8 @@
 from scrapy import Request
 import json
-from ..entities import Product, ProductSpider
+from ..scrappy_utils import Product, ProductSpider
 
-SITE_NAME = "The Bradery"
+SITE_NAME = "the_bradery"
 START_URLS = ["https://thebradery.com/collections"]
 
 
