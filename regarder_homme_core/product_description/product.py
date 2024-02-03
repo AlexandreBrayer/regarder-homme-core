@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-
+#PYDANTICCCCCCCCCCCCCCC
 
 @dataclass
 class Product:

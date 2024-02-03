@@ -22,4 +22,3 @@ class ProductSpider(Spider):
         print(json.dumps(
             {"products": self.products, "stats": stats, "spider_name": spider.name}, default=str))
         sys.stdout.flush()
-

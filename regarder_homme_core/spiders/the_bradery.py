@@ -1,6 +1,6 @@
 from scrapy import Request
 import json
-from ..scrappy_utils import Product, ProductSpider
+from ..product_description import Product, ProductSpider
 
 SITE_NAME = "the_bradery"
 START_URLS = ["https://thebradery.com/collections"]
@@ -35,15 +35,15 @@ class TheBradery(ProductSpider):
                             title=product["title"],
                             url="https://thebradery.com/products/" + product["handle"],
                             reference=sku["sku"],
-                            rrp=float(
-                                product["variants"][0]["compare_at_price"]
-                                or product["variants"][0]["price"]
-                            ),
+                            # rrp=float(
+                            #     product["variants"][0]["compare_at_price"]
+                            #     or product["variants"][0]["price"]
+                            # ),
                             price=float(product["variants"][0]["price"]),
                             currency="EUR",
-                            category=product["product_type"],
-                            brand=product["vendor"],
-                            description= product["body_html"],
-                            images_url= [x["src"] for x in product["images"]],     
+                            # category=product["product_type"],
+                            # brand=product["vendor"],
+                            # description= product["body_html"],
+                            # images_url= [x["src"] for x in product["images"]],     
                         )
                     )
